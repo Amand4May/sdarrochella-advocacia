@@ -1,9 +1,18 @@
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { Sobre } from "./components/Sobre";
+
 function App() {
   return (
-    <div className="bg-adv-marinho text-adv-branco min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl">Sequeira d'Arrochella Advocacia - Consultoria, compliance, assessoria e advocacia</h1>
+    <div className="bg-adv-branco min-h-screen font-sans text-adv-cinza scroll-smooth selection:bg-adv-laranja selection:text-adv-branco">
+      <Header />
+      
+      <main>
+        <Hero />
+        <Sobre />
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
