@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, MessageCircle } from 'lucide-react';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
