@@ -1,7 +1,27 @@
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
+import { Sobre } from './components/Sobre'
+import { AreasAtuacao } from './components/AreasAtuacao'
+import { ComoFunciona } from './components/ComoFunciona' 
+import { Equipe } from './components/Equipe'
+import { Contato } from './components/Contato'
+import { Localizacao } from './components/Localizacao'
+import { Footer } from './components/Footer'
+
 function App() {
   return (
-    <div className="bg-adv-marinho text-adv-branco min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl">Sequeira d'Arrochella Advocacia - Consultoria, compliance, assessoria e advocacia</h1>
+    <div className="min-h-screen bg-adv-branco font-sans scroll-smooth">
+      <Header />
+      <main>
+        <Hero />
+        <Sobre />
+        <AreasAtuacao />
+        <ComoFunciona />
+        <Equipe />
+        <Contato />
+        <Localizacao/>
+      </main>
+      <Footer />
     </div>
   )
 }
