@@ -1,70 +1,89 @@
+import { MapPin, Clock, Mail } from 'lucide-react';
+
 export function Localizacao() {
   return (
-    <section id="localizacao" className="pt-20 pb-10 px-6 md:px-12 bg-white flex flex-col items-center">
-      <div className="max-w-4xl mx-auto w-full">
+    <section id="localizacao" className="py-24 px-6 md:px-12 bg-adv-branco">
+      <div className="max-w-6xl mx-auto w-full">
         
         {/* Título e Subtítulo */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-adv-marinho mb-4">
+          <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">Onde Estamos</span>
+          <h2 className="text-3xl md:text-5xl font-serif text-adv-marinho mt-4 mb-4">
             Localização privilegiada
           </h2>
-          <p className="text-adv-cinza text-base md:text-lg">
-            Para o melhor atendimento de nossos clientes,<br className="hidden md:block" /> 
-            realizamos atendimento na Região Oceânica em Niterói e no Centro do Rio de Janeiro.
+          <p className="text-adv-cinza text-base md:text-lg max-w-2xl mx-auto">
+            Para o melhor atendimento de nossos clientes, realizamos atendimento na Região Oceânica em Niterói e no Centro do Rio de Janeiro.
           </p>
         </div>
 
-        {/* Grid dos Endereços */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+        {/* Grid dos Endereços em Cards Estilizados */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           
-          {/* Endereço 1: Itaipu */}
-          <div className="flex flex-col text-adv-cinza text-sm md:text-base space-y-2">
-            <div className="mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1c2b4a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                <path d="M9 22v-4h6v4"></path>
-                <path d="M8 6h.01"></path>
-                <path d="M16 6h.01"></path>
-                <path d="M12 6h.01"></path>
-                <path d="M12 10h.01"></path>
-                <path d="M12 14h.01"></path>
-                <path d="M16 10h.01"></path>
-                <path d="M16 14h.01"></path>
-                <path d="M8 10h.01"></path>
-                <path d="M8 14h.01"></path>
-              </svg>
+          {/* Endereço 1: Itaipu (Sede) */}
+          <div className="bg-adv-creme/40 p-8 lg:p-10 rounded-3xl border border-adv-marrom/10 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-adv-marinho mb-6 shadow-sm">
+                <MapPin size={28} />
+              </div>
+              <h3 className="text-2xl font-serif text-adv-marinho font-bold mb-4">Itaipu <span className="text-sm font-sans font-normal text-adv-laranja uppercase tracking-wider block mt-1">(Sede)</span></h3>
+              
+              <p className="text-adv-cinza text-sm md:text-base mb-6 leading-relaxed">
+                Estrada Francisco da Cruz Nunes, Piratininga, Niterói, RJ
+              </p>
+
+              <div className="space-y-3 text-sm text-adv-cinza pt-6 border-t border-adv-marrom/10">
+                <div className="flex items-center gap-3">
+                  <Mail size={18} className="text-adv-laranja shrink-0" />
+                  <span>contato@sdarrochella.com.br</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock size={18} className="text-adv-laranja shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-adv-marinho">Atendimento com horário agendado</p>
+                    <p className="text-xs text-adv-cinza/80 mt-0.5">2ª a 5ª feira de 11h às 17h e 6ª de 11h às 16h</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-serif text-adv-marinho font-bold mb-2">Itaipu (sede)</h3>
-            <p>Estrada Francisco da Cruz Nunes, Piratininga, Niterói, RJ</p>
-            <p>E-mail: contato@sdarrochella.com.br</p>
-            <p className="font-bold text-adv-marinho pt-2">Atendimento com horário agendado</p>
-            <p className="font-bold text-adv-marinho">Atendimento de 2ª a 5ª feira de 11h às 17h e 6ª de 11h às 16h</p>
           </div>
 
-          {/* Endereço 2: Rio de Janeiro */}
-          <div className="flex flex-col text-adv-cinza text-sm md:text-base space-y-2">
-            <div className="mb-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1c2b4a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                <path d="M9 22v-4h6v4"></path>
-                <path d="M8 6h.01"></path>
-                <path d="M16 6h.01"></path>
-                <path d="M12 6h.01"></path>
-                <path d="M12 10h.01"></path>
-                <path d="M12 14h.01"></path>
-                <path d="M16 10h.01"></path>
-                <path d="M16 14h.01"></path>
-                <path d="M8 10h.01"></path>
-                <path d="M8 14h.01"></path>
-              </svg>
+          {/* Endereço 2: Rio de Janeiro (Filial) */}
+          <div className="bg-adv-creme/40 p-8 lg:p-10 rounded-3xl border border-adv-marrom/10 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-adv-marinho mb-6 shadow-sm">
+                <MapPin size={28} />
+              </div>
+              <h3 className="text-2xl font-serif text-adv-marinho font-bold mb-4">Rio de Janeiro <span className="text-sm font-sans font-normal text-adv-laranja uppercase tracking-wider block mt-1">(Centro - Filial)</span></h3>
+              
+              <p className="text-adv-cinza text-sm md:text-base mb-6 leading-relaxed">
+                Avenida Rio Branco, Centro, Rio de Janeiro, RJ
+              </p>
+
+              <div className="space-y-3 text-sm text-adv-cinza pt-6 border-t border-adv-marrom/10">
+                <div className="flex items-center gap-3">
+                  <Mail size={18} className="text-adv-laranja shrink-0" />
+                  <span>contato@sdarrochella.com.br</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock size={18} className="text-adv-laranja shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-adv-marinho">Atendimento com horário agendado</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-xl font-serif text-adv-marinho font-bold mb-2">Rio de Janeiro - Centro (filial)</h3>
-            <p>Avenida Rio Branco, Centro, Rio de Janeiro, RJ</p>
-            <p className="font-bold text-adv-marinho pt-6">Atendimento com horário agendado</p>
-            <a href="#" className="text-yellow-600 font-bold flex items-center gap-1 hover:underline mt-2 text-sm uppercase tracking-wider">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              Get Directions
-            </a>
+
+            <div className="pt-6 mt-6 border-t border-adv-marrom/10">
+              <a 
+                href="https://maps.google.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-adv-laranja font-bold flex items-center gap-2 hover:underline text-xs uppercase tracking-wider"
+              >
+                <MapPin size={16} />
+                Como Chegar
+              </a>
+            </div>
           </div>
 
         </div>
