@@ -5,8 +5,8 @@ export function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
   const location = useLocation();
 
-  // Essa função garante que o menu mobile feche sozinho e a página 
-  // role de volta para o topo toda vez que o usuário trocar de tela.
+  // funcao garante que o menu mobile feche sozinho e a pagina 
+  // role de volta para o topo toda vez que o usuario trocar de tela.
   useEffect(() => {
     setMenuAberto(false);
     window.scrollTo(0, 0);

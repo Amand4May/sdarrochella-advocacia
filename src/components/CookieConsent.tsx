@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// ----------------------------------------------------------------------
-// MOTOR DE INJEÇÃO DE SCRIPTS
-// Aqui fica a trava de segurança. Códigos de rastreamento só entram 
-// se essa função for chamada (ou seja, só após o consentimento explícito).
-// ----------------------------------------------------------------------
 const injectTrackingScripts = () => {
   console.log('✅ Consentimento total: Scripts de rastreamento injetados!');
   
@@ -42,7 +37,6 @@ export function CookieConsent() {
   const handleAcceptEssential = () => {
     localStorage.setItem('lgpd-consent-mode', 'essential');
     console.log('🛡️ Consentimento restrito: Apenas cookies estritamente necessários.');
-    // Não chama a injeção de scripts, apenas fecha o banner
     setIsVisible(false);
   };
 

@@ -17,7 +17,6 @@ export function Bifurcacao() {
           
           {/* Card 1: Para Você (Agora com mais peso visual) */}
           <div className="bg-white p-10 lg:p-14 rounded-2xl shadow-xl border-t-4 border-adv-marrom flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden">
-            {/* Detalhe visual de fundo suave para equilibrar */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-adv-laranja/40 rounded-bl-full -z-0"></div>
             
             <div className="w-20 h-20 bg-adv-marinho text-adv-branco rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-md">
@@ -43,7 +42,6 @@ export function Bifurcacao() {
 
           {/* Card 2: Para Empresas */}
           <div className="bg-adv-marinho text-adv-branco p-10 lg:p-14 rounded-2xl shadow-xl flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden">
-            {/* Detalhe visual de fundo */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-adv-marrom/20 rounded-bl-full -z-0"></div>
             
             <div className="w-20 h-20 bg-white/10 text-adv-branco rounded-2xl flex items-center justify-center mb-8 relative z-10">

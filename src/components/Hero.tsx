@@ -39,7 +39,6 @@ export function Hero() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/escritorio.jpg')" }}
         ></div>
-        {/* Leve gradiente para unir as duas partes suavemente */}
         <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-adv-marinho to-transparent opacity-50 hidden lg:block"></div>
       </div>
 

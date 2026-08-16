@@ -1,9 +1,6 @@
-import { Check } from 'lucide-react';
-
 export function Sobre() {
   return (
     <section id="sobre" className="py-24 px-6 md:px-12 bg-adv-branco">
-      {/* items-center garante que o texto e o card se alinhem verticalmente */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
         {/* Lado Esquerdo: O Escritório */}
@@ -29,7 +26,6 @@ export function Sobre() {
         {/* Lado Direito: Nossa Estrutura */}
         <div className="lg:col-span-5 bg-adv-creme rounded-3xl border border-adv-marrom/10 shadow-xl overflow-hidden flex flex-col">
           
-          {/* Imagem do Escritório (Ajustada para foto VERTICAL) */}
           <div className="w-full h-[450px] lg:h-[500px] relative overflow-hidden bg-adv-marrom/5">
              <img 
                src="/escritorio.jpg" 

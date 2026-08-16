@@ -14,7 +14,6 @@ export function Footer() {
       />
       {/* --- FIM DA MARCA D'ÁGUA --- */}
 
-      {/* Precisamos adicionar 'relative z-10' na div de conteúdo para ela ficar por cima da marca d'água */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
 
         {/* Coluna 1: Marca e Endereço */}

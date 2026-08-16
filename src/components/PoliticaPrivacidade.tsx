@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react'; // 1. Adicione esta importação
+import { ArrowLeft } from 'lucide-react';
 
 export function PoliticaPrivacidade() {
   return (
@@ -12,7 +12,6 @@ export function PoliticaPrivacidade() {
 
       <div className="max-w-3xl mx-auto">
         
-        {/* 2. Substitua o botão antigo por este novo */}
         <Link 
           to="/" 
           className="inline-flex items-center gap-2 px-5 py-2.5 mb-10 text-xs font-bold uppercase tracking-widest text-adv-marinho border border-adv-marinho/20 rounded-full hover:bg-adv-marinho hover:text-adv-branco transition-all duration-300"
