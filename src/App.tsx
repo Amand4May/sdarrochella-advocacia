@@ -6,7 +6,6 @@ import { Sobre } from './components/Sobre';
 import { ComoAtuamos } from './components/ComoAtuamos';
 import { AreasAtuacao } from './components/AreasAtuacao';
 import { Equipe } from './components/Equipe';
-import { Localizacao } from './components/Localizacao';
 import { PortalCliente } from './components/PortalCliente';
 import { Contato } from './components/Contato';
 import { Footer } from './components/Footer';
