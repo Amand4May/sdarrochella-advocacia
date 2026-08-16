@@ -40,7 +40,7 @@ export function Header() {
         {/* 3. Botão Fale Conosco & Menu Mobile */}
         <div className="flex items-center gap-4">
           <Link 
-            to="/contato" 
+            to="/#contato"  
             className="hidden md:inline-block bg-adv-marinho text-adv-branco px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-adv-cinza transition-colors duration-300"
           >
             Fale Conosco

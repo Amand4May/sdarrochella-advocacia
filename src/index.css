@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@layer base {
+  ::selection {
+    @apply bg-adv-laranja text-white;
+  }
+  
+  /* Para garantir compatibilidade com navegadores mais antigos como o Firefox antigo */
+  ::-moz-selection {
+    @apply bg-adv-laranja text-white;
+  }
+}
+
 @theme {
   --color-adv-branco: #fdfdfd;
   --color-adv-creme: #f4e9d7;

@@ -34,7 +34,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-adv-marrom shrink-0" />
-              <span>processo@sdarrochella.com.br</span>
+              <span>contato@sdarrochella.com.br</span>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export function Footer() {
             <Link to="/para-voce" className="hover:text-adv-marrom transition-colors">Para Você</Link>
             <Link to="/para-empresas" className="hover:text-adv-marrom transition-colors">Para Empresas</Link>
             <Link to="/atuacao-em-parceria" className="hover:text-adv-marrom transition-colors">Atuação em Parceria</Link>
-            <Link to="/contato" className="hover:text-adv-marrom transition-colors">Contato</Link>
+            <Link to="/#contato" className="hover:text-adv-marrom transition-colors">Contato</Link>
           </ul>
         </div>
 

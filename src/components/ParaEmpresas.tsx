@@ -1,28 +1,45 @@
 import { Helmet } from 'react-helmet-async';
-import { Building2, Shield, UserCheck, Gavel, Store, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Building2, Shield, UserCheck, Gavel, Store, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export function ParaEmpresas() {
   return (
-    <main className="pt-20 pb-24 px-6 md:px-12 bg-adv-branco text-adv-cinza">
+    <main className="pb-24 bg-adv-branco text-adv-cinza">
       <Helmet>
         <title>Para Empresas | S. Darrochella Advocacia</title>
         <meta name="description" content="Assessoria jurídica para empresas: Compliance, LGPD, DPO e Relações de Consumo." />
       </Helmet>
 
-      {/* Introdução */}
-      <div className="max-w-4xl mx-auto text-center mb-20">
-        <span className="text-sm font-bold text-adv-marrom uppercase tracking-widest">
-          Assessoria Corporativa
-        </span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-marinho mt-4 mb-8">
-          Para empresas
-        </h1>
-        <p className="text-lg md:text-xl leading-relaxed text-adv-cinza">
-          Passivo trabalhista e passivo de proteção de dados têm a mesma origem: rotinas internas que se consolidam sem revisão jurídica e só são questionadas quando já produziram efeito. A atuação do escritório junto a organizações é orientada à identificação antecipada desses pontos, ao desenho de controles proporcionais ao porte e à atividade da empresa, e à defesa técnica quando o conflito já está instaurado.
-        </p>
-      </div>
+      {/* Introdução com Fundo Marinho e Botão de Voltar */}
+      <section className="bg-adv-marinho pt-12 pb-24 px-6 md:px-12 mb-16 relative">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* Botão de Voltar */}
+          <div className="mb-8">
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 text-adv-branco/70 hover:text-adv-laranja transition-colors text-sm font-bold uppercase tracking-wider"
+            >
+              <ArrowLeft size={18} />
+              Voltar para o início
+            </Link>
+          </div>
 
-      <div className="max-w-5xl mx-auto space-y-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
+              Assessoria Corporativa
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-branco mt-4 mb-8">
+              Para empresas
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed text-adv-branco/80">
+              Passivo trabalhista e passivo de proteção de dados têm a mesma origem: rotinas internas que se consolidam sem revisão jurídica e só são questionadas quando já produziram efeito. A atuação do escritório junto a organizações é orientada à identificação antecipada desses pontos, ao desenho de controles proporcionais ao porte e à atividade da empresa, e à defesa técnica quando o conflito já está instaurado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto space-y-16 px-6 md:px-12 lg:px-0">
         
         {/* 1. Compliance Trabalhista */}
         <div className="bg-adv-creme p-8 md:p-12 rounded-2xl border border-gray-100">
@@ -151,15 +168,14 @@ export function ParaEmpresas() {
           <p className="text-adv-branco/80 max-w-xl mx-auto mb-8">
             Agende uma avaliação com o escritório para diagnosticarmos os pontos de risco do seu negócio e definirmos as melhores estratégias.
           </p>
-          <a
-            href="/contato"
+          <Link 
+            to="/#contato" 
             className="inline-flex items-center gap-2 bg-adv-marrom text-adv-branco font-medium rounded-full px-8 py-3 transition-transform hover:-translate-y-0.5 hover:shadow-lg"
           >
-            Agendar atendimento
             <ArrowRight size={18} />
-          </a>
+            Agendar atendimento
+          </Link>
         </div>
-
       </div>
     </main>
   );

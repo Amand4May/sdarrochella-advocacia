@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Landmark, Home, Users, ShieldAlert, AlertCircle, MessageSquare } from 'lucide-react';
+import { Landmark, Home, Users, ShieldAlert, AlertCircle, MessageSquare, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function AtuacaoEmParceria() {
@@ -10,19 +10,33 @@ export function AtuacaoEmParceria() {
         <meta name="description" content="Conheça nossos escritórios parceiros nas áreas de Direito Previdenciário, Bancário, Imobiliário e Famílias." />
       </Helmet>
 
-      {/* 1. HERO SECTION ESCURO COM MARCA D'ÁGUA */}
-      <section className="relative bg-adv-marinho text-adv-branco pt-32 pb-24 px-6 md:px-12 overflow-hidden shadow-inner">
+      {/* 1. HERO SECTION ESCURO COM MARCA D'ÁGUA E BOTÃO VOLTAR */}
+      <section className="relative bg-adv-marinho text-adv-branco pt-12 pb-24 px-6 md:px-12 overflow-hidden shadow-inner">
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
-            Rede de Apoio Jurídico
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-branco mt-4 mb-8">
-            Atuação em parceria
-          </h1>
-          <p className="text-lg md:text-xl leading-relaxed text-adv-branco/80 text-justify md:text-center">
-            Nem toda demanda se resolve dentro de uma única área do direito. É frequente que um caso trabalhista tenha desdobramento previdenciário, que um conflito de consumo envolva contrato bancário ou aquisição de imóvel, ou que uma questão patrimonial exija análise sob a ótica do direito das famílias e das sucessões.
-          </p>
+        <div className="relative z-10 max-w-5xl mx-auto">
+          
+          {/* Botão de Voltar */}
+          <div className="mb-8">
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 text-adv-branco/70 hover:text-adv-laranja transition-colors text-sm font-bold uppercase tracking-wider"
+            >
+              <ArrowLeft size={18} />
+              Voltar para o início
+            </Link>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
+              Rede de Apoio Jurídico
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-branco mt-4 mb-8">
+              Atuação em parceria
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed text-adv-branco/80 text-justify md:text-center">
+              Nem toda demanda se resolve dentro de uma única área do direito. É frequente que um caso trabalhista tenha desdobramento previdenciário, que um conflito de consumo envolva contrato bancário ou aquisição de imóvel, ou que uma questão patrimonial exija análise sob a ótica do direito das famílias e das sucessões.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -90,13 +104,13 @@ export function AtuacaoEmParceria() {
           {/* Botão de Contato */}
           <div className="mt-16 text-center">
             <Link 
-              to="/contato" 
-              className="inline-block bg-adv-marinho text-adv-branco font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-adv-marrom transition-colors shadow-md"
+              to="/#contato" 
+              className="inline-flex items-center gap-2 bg-adv-marinho text-adv-branco font-bold uppercase tracking-wider px-8 py-4 rounded-full hover:bg-adv-marrom transition-colors shadow-md"
             >
-              Agendar Atendimento
+              <ArrowRight size={18} />
+              Agendar atendimento
             </Link>
           </div>
-
         </div>
       </section>
     </main>

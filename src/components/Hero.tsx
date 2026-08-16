@@ -24,7 +24,7 @@ export function Hero() {
           
           <div className="pt-6">
             <Link 
-              to="/contato" 
+              to="/#contato" 
               className="inline-block bg-adv-marrom hover:bg-adv-bege hover:text-adv-marinho text-adv-branco px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors duration-300 shadow-lg"
             >
               Agendar Atendimento

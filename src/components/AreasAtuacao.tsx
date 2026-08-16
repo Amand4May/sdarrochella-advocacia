@@ -1,4 +1,4 @@
-import { Briefcase, FileSignature, Scale, Check } from 'lucide-react';
+import { Briefcase, ShoppingBag, ShieldCheck, Check } from 'lucide-react';
 
 export function AreasAtuacao() {
   return (
@@ -13,7 +13,7 @@ export function AreasAtuacao() {
           Áreas de atuação
         </h2>
         <p className="text-adv-cinza text-base md:text-lg max-w-2xl mx-auto">
-          Aqui você encontra todas as áreas que nosso escritório atende e as especializações que possuímos.
+          Aqui você encontra todas as relações que o nosso escritório atende e as especializações que possuímos.
         </p>
       </div>
 
@@ -27,12 +27,19 @@ export function AreasAtuacao() {
               <Briefcase size={32} strokeWidth={1.5} />
             </div>
             <h3 className="text-2xl font-serif text-adv-marrom uppercase tracking-wide group-hover:text-adv-marinho transition-colors leading-tight">
-              Direito <br/> <span className="text-xl font-sans font-bold">Do Trabalho</span>
+              Direito <br/> <span className="text-xl font-sans font-bold">do Trabalho</span>
             </h3>
           </div>
           
           <ul className="space-y-4 text-adv-marinho font-medium text-sm md:text-base mt-4">
-            {['Consultoria e orientações em geral', 'Acompanhamento de acordos', 'Compliance Trabalhista', 'Elaboração e análise de contratos', 'Ação Trabalhista', 'Ações Possessórias Trabalhistas'].map((item, index) => (
+            {[
+              'Atuação preventiva e consultiva',
+              'Contencioso em todas as instâncias',
+              'Compliance Trabalhista e Auditoria',
+              'Elaboração e análise de contratos',
+              'Negociações coletivas e mediações',
+              'Acompanhamento em fiscalizações e MPT'
+            ].map((item, index) => (
               <li key={index} className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded-full bg-adv-marrom/20 flex items-center justify-center shrink-0">
                   <Check size={12} className="text-adv-marrom" strokeWidth={3} />
@@ -43,34 +50,11 @@ export function AreasAtuacao() {
           </ul>
         </div>
 
-        {/* Card 2: EXTRAJUDICIAL */}
-        <div className="group bg-adv-creme p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-adv-marinho flex flex-col h-full rounded-3xl">
-          <div className="mb-6 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-adv-marinho mb-4 shadow-sm group-hover:scale-110 transition-transform duration-300">
-              <FileSignature size={32} strokeWidth={1.5} />
-            </div>
-            <h3 className="text-2xl font-serif text-adv-marinho uppercase tracking-wide group-hover:text-adv-marrom transition-colors leading-tight">
-              Extrajudicial <br/> <span className="text-xl font-sans font-bold">Acompanhamentos</span>
-            </h3>
-          </div>
-          
-          <ul className="space-y-4 text-adv-marinho font-medium text-sm md:text-base mt-4">
-            {['Notificações extrajudiciais', 'Cobrança', 'Execução de contratos', 'Acompanhamento em assinaturas', 'Diligências no INSS', 'Cálculos trabalhistas e consumidor'].map((item, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-adv-marinho/20 flex items-center justify-center shrink-0">
-                  <Check size={12} className="text-adv-marinho" strokeWidth={3} />
-                </div>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Card 3: DIREITO DO CONSUMIDOR */}
+        {/* Card 2: DIREITO DO CONSUMIDOR (Updated styling and text) */}
         <div className="group bg-adv-creme p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-adv-azulClaro flex flex-col h-full rounded-3xl">
           <div className="mb-6 flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-adv-azulClaro mb-4 shadow-sm group-hover:scale-110 transition-transform duration-300">
-              <Scale size={32} strokeWidth={1.5} />
+              <ShoppingBag size={32} strokeWidth={1.5} />
             </div>
             <h3 className="text-2xl font-serif text-adv-azulClaro uppercase tracking-wide group-hover:text-adv-marinho transition-colors leading-tight">
               Direito <br/> <span className="text-xl font-sans font-bold">Do Consumidor</span>
@@ -78,10 +62,47 @@ export function AreasAtuacao() {
           </div>
           
           <ul className="space-y-4 text-adv-marinho font-medium text-sm md:text-base mt-4">
-            {['Consultoria e orientações em geral', 'Acompanhamento de acordos', 'Treinamento operacional', 'Elaboração e análise de contratos', 'Ação judicial em JEC', 'Ação Judicial em Vara Cível'].map((item, index) => (
+            {[
+              'Ações judiciais e indenizatórias',
+              'Reclamações administrativas (Procon, Consumidor.gov)',
+              'Consultoria preventiva para fornecedores',
+              'Elaboração de contratos de consumo',
+              'Práticas abusivas e publicidade enganosa',
+              'Defesa de superendividamento'
+            ].map((item, index) => (
               <li key={index} className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded-full bg-adv-azulClaro/20 flex items-center justify-center shrink-0">
                   <Check size={12} className="text-adv-azulClaro" strokeWidth={3} />
+                </div>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Card 3: PROTEÇÃO DE DADOS E LGPD (Updated styling and text) */}
+        <div className="group bg-adv-creme p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-adv-marinho flex flex-col h-full rounded-3xl">
+          <div className="mb-6 flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-adv-marinho mb-4 shadow-sm group-hover:scale-110 transition-transform duration-300">
+              <ShieldCheck size={32} strokeWidth={1.5} />
+            </div>
+            <h3 className="text-2xl font-serif text-adv-marinho uppercase tracking-wide group-hover:text-adv-marrom transition-colors leading-tight">
+              Proteção de Dados <br/> <span className="text-xl font-sans font-bold">e LGPD</span>
+            </h3>
+          </div>
+          
+          <ul className="space-y-4 text-adv-marinho font-medium text-sm md:text-base mt-4">
+            {[
+              'Adequação e implementação à LGPD',
+              'Auditorias e Relatórios de Impacto (RIPD)',
+              'Treinamento e conscientização de equipes',
+              'Gestão de Direitos dos Titulares',
+              'Governança de Dados e Políticas Internas',
+              'Resposta a incidentes e vazamentos'
+            ].map((item, index) => (
+              <li key={index} className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-adv-marinho/20 flex items-center justify-center shrink-0">
+                  <Check size={12} className="text-adv-marinho" strokeWidth={3} />
                 </div>
                 <span>{item}</span>
               </li>

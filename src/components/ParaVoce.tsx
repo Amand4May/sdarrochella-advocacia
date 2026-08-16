@@ -1,28 +1,45 @@
 import { Helmet } from 'react-helmet-async';
-import { Briefcase, ShoppingBag, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Briefcase, ShoppingBag, ShieldCheck, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export function ParaVoce() {
   return (
-    <main className="pt-20 pb-24 px-6 md:px-12 bg-adv-branco text-adv-cinza">
+    <main className="pb-24 bg-adv-branco text-adv-cinza">
       <Helmet>
         <title>Para Você | S. Darrochella Advocacia</title>
         <meta name="description" content="Atendimento pessoa física: Direito do Trabalho, Consumidor e Proteção de Dados." />
       </Helmet>
 
-      {/* Introdução */}
-      <div className="max-w-4xl mx-auto text-center mb-20">
-        <span className="text-sm font-bold text-adv-marrom uppercase tracking-widest">
-          Atendimento Pessoa Física
-        </span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-marinho mt-4 mb-8">
-          Para você
-        </h1>
-        <p className="text-lg md:text-xl leading-relaxed text-adv-cinza">
-          Situações que envolvem trabalho, consumo e uso dos seus dados pessoais costumam chegar acompanhadas de insegurança sobre o que é possível fazer e em quanto tempo. O primeiro passo do escritório é sempre o mesmo: entender os fatos, verificar o que está efetivamente documentado e apresentar, de forma clara, os caminhos disponíveis e seus respectivos riscos.
-        </p>
-      </div>
+      {/* Introdução com Fundo Marinho e Botão de Voltar */}
+      <section className="bg-adv-marinho pt-12 pb-24 px-6 md:px-12 mb-16 relative">
+        <div className="max-w-5xl mx-auto">
+          
+          {/* Botão de Voltar */}
+          <div className="mb-8">
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 text-adv-branco/70 hover:text-adv-laranja transition-colors text-sm font-bold uppercase tracking-wider"
+            >
+              <ArrowLeft size={18} />
+              Voltar para o início
+            </Link>
+          </div>
 
-      <div className="max-w-5xl mx-auto space-y-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
+              Atendimento Pessoa Física
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-adv-branco mt-4 mb-8">
+              Para você
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed text-adv-branco/80">
+              Situações que envolvem trabalho, consumo e uso dos seus dados pessoais costumam chegar acompanhadas de insegurança sobre o que é possível fazer e em quanto tempo. O primeiro passo do escritório é sempre o mesmo: entender os fatos, verificar o que está efetivamente documentado e apresentar, de forma clara, os caminhos disponíveis e seus respectivos riscos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto space-y-16 px-6 md:px-12 lg:px-0">
         
         {/* 1. Direito do Trabalho */}
         <div className="bg-adv-creme p-8 md:p-12 rounded-2xl border border-gray-100">
@@ -34,7 +51,6 @@ export function ParaVoce() {
           </div>
           <p className="mb-6 text-lg">Atuação na defesa de direitos decorrentes da relação de emprego e de outras formas de prestação de serviços, na fase de conhecimento, na liquidação e na execução.</p>
           
-          {/* LISTA ATUALIZADA: Usando columns em vez de grid */}
           <ul className="columns-1 md:columns-2 gap-x-12 mb-8 list-disc list-outside ml-5 text-adv-cinza marker:text-adv-marrom [&>li]:mb-4 [&>li]:break-inside-avoid">
             <li>Verbas rescisórias e irregularidades na rescisão contratual</li>
             <li>Reconhecimento de vínculo empregatício, inclusive informais e doméstico</li>
@@ -65,7 +81,6 @@ export function ParaVoce() {
           </div>
           <p className="mb-6 text-lg">Atuação em conflitos decorrentes de relações de consumo, na via administrativa e na via judicial, com foco na reconstrução documental dos fatos e na quantificação correta do prejuízo.</p>
           
-          {/* LISTA ATUALIZADA: Usando columns em vez de grid */}
           <ul className="columns-1 md:columns-2 gap-x-12 mb-8 list-disc list-outside ml-5 text-adv-cinza marker:text-adv-marrom [&>li]:mb-4 [&>li]:break-inside-avoid">
             <li>Vício e defeito de produto e de serviço</li>
             <li>Cobrança indevida, cobrança abusiva e repetição de indébito</li>
@@ -97,7 +112,6 @@ export function ParaVoce() {
           </div>
           <p className="mb-6 text-lg">A Lei Geral de Proteção de Dados assegura a você, titular, um conjunto de direitos sobre as informações que empresas e órgãos públicos mantêm a seu respeito. Esses direitos podem ser exercidos diretamente perante a organização e, se necessário, perante a Autoridade Nacional de Proteção de Dados e o Poder Judiciário.</p>
           
-          {/* LISTA ATUALIZADA: Usando columns em vez de grid */}
           <ul className="columns-1 md:columns-2 gap-x-12 mb-8 list-disc list-outside ml-5 text-adv-cinza marker:text-adv-marrom [&>li]:mb-4 [&>li]:break-inside-avoid">
             <li>Exercício de direitos: confirmação, acesso, correção, anonimização, portabilidade e eliminação</li>
             <li>Revogação de consentimento e oposição ao tratamento</li>
@@ -117,22 +131,21 @@ export function ParaVoce() {
         </div>
         
         {/* CTA final */}
-      <div className="max-w-5xl mx-auto mt-20 text-center bg-adv-marinho rounded-2xl px-8 py-14">
-        <h3 className="font-serif text-2xl md:text-3xl text-adv-branco mb-3">
-          Ainda com dúvidas sobre o seu caso?
-        </h3>
-        <p className="text-adv-branco/80 max-w-xl mx-auto mb-8">
-          Descreva a sua situação e o escritório retorna com os próximos passos e uma avaliação
-          inicial.
-        </p>
-        <a
-          href="/contato"
-          className="inline-flex items-center gap-2 bg-adv-marrom text-adv-branco font-medium rounded-full px-8 py-3 transition-transform hover:-translate-y-0.5 hover:shadow-lg"
-        >
-          Falar com o escritório
-          <ArrowRight size={18} />
-        </a>
-      </div>
+        <div className="max-w-5xl mx-auto mt-20 text-center bg-adv-marinho rounded-2xl px-8 py-14">
+          <h3 className="font-serif text-2xl md:text-3xl text-adv-branco mb-3">
+            Ainda com dúvidas sobre o seu caso?
+          </h3>
+          <p className="text-adv-branco/80 max-w-xl mx-auto mb-8">
+            Descreva a sua situação e o escritório retorna com os próximos passos e uma avaliação inicial.
+          </p>
+          <Link 
+            to="/#contato" 
+            className="inline-flex items-center gap-2 bg-adv-marrom text-adv-branco font-medium rounded-full px-8 py-3 transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            <ArrowRight size={18} />
+            Agendar atendimento
+          </Link>
+        </div>
       </div>
     </main>
   );
