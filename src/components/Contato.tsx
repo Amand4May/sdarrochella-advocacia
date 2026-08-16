@@ -1,9 +1,10 @@
-import { MapPin, Mail, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export function Contato() {
-  // LÓGICA DO FORMULÁRIO (Deve ficar aqui, antes do return)
+  // LÓGICA DO FORMULÁRIO
   const form = useRef<HTMLFormElement>(null);
   const [enviando, setEnviando] = useState(false);
   const [status, setStatus] = useState<'idle' | 'sucesso' | 'erro'>('idle');
@@ -17,14 +18,14 @@ export function Contato() {
     setStatus('idle');
 
     emailjs.sendForm(
-      'SEU_SERVICE_ID', // Substituiremos isso depois
-      'SEU_TEMPLATE_ID', // Substituiremos isso depois
+      'SEU_SERVICE_ID', // Substituir depois
+      'SEU_TEMPLATE_ID', // Substituir depois
       form.current,
-      'SUA_PUBLIC_KEY' // Substituiremos isso depois
+      'SUA_PUBLIC_KEY' // Substituir depois
     )
     .then(() => {
       setStatus('sucesso');
-      form.current?.reset(); // Limpa os campos após o envio
+      form.current?.reset();
     })
     .catch((error) => {
       console.error('Erro ao enviar e-mail:', error);
@@ -37,128 +38,113 @@ export function Contato() {
 
   // VISUAL DA SEÇÃO
   return (
-    <section id="contato" className="py-20 px-6 md:px-12 bg-adv-marinho text-adv-branco">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section id="contato" className="py-24 px-6 md:px-12 bg-adv-creme text-adv-marinho">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Coluna da Esquerda: Informações */}
-        <div className="space-y-8">
-          <div>
-            <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
-              Fale Conosco
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mt-4 mb-6 leading-tight">
-              Agende sua consulta e proteja seus direitos.
-            </h2>
-            <p className="text-adv-creme text-base md:text-lg opacity-90 max-w-md">
-              Nossa equipe está pronta para analisar o seu caso com total sigilo e dedicação. Entre em contato pelos canais abaixo ou preencha o formulário.
-            </p>
-          </div>
-
-          <div className="space-y-6 mt-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                <MessageCircle className="text-adv-laranja" size={24} />
+        <div>
+          <span className="text-sm font-bold text-adv-marrom uppercase tracking-widest">Atendimento</span>
+          <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-8 leading-tight">Fale com o escritório</h2>
+          <p className="text-lg text-adv-cinza mb-10 leading-relaxed">
+            Para agendar uma avaliação do seu caso trabalhista, de consumo ou solicitar uma proposta de adequação à LGPD para a sua empresa, entre em contato pelo e-mail ou preencha o formulário abaixo.
+          </p>
+          
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-adv-branco rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-gray-100">
+                <Mail className="text-adv-marrom" size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-lg">WhatsApp</h4>
-                <p className="text-adv-creme opacity-80 mt-1">(15) 99999-9999</p>
+                <h4 className="font-bold">E-mail Corporativo</h4>
+                <p className="text-adv-cinza">contato@sdarrochella.com.br</p>
               </div>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                <Mail className="text-adv-laranja" size={24} />
+            
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-adv-branco rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-gray-100">
+                <MapPin className="text-adv-marrom" size={24} />
               </div>
               <div>
-                <h4 className="font-bold text-lg">E-mail</h4>
-                <p className="text-adv-creme opacity-80 mt-1">contato@sdarrochella.com.br</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                <MapPin className="text-adv-laranja" size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg">Endereço</h4>
-                <p className="text-adv-creme opacity-80 mt-1">
-                  Rua Exemplo de Endereço, 123 - Sala 45<br />
-                  Sorocaba, SP - CEP 18000-000
-                </p>
+                <h4 className="font-bold">Endereço (Sede)</h4>
+                <p className="text-adv-cinza">Estrada Francisco da Cruz Nunes, Piratininga, Niterói, RJ</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Coluna da Direita: Formulário */}
-        <div className="bg-adv-branco text-adv-cinza p-8 md:p-10 rounded-xl shadow-2xl">
-          <h3 className="text-2xl font-serif text-adv-marinho mb-6">Envie uma mensagem</h3>
-          
-          <form ref={form} className="space-y-5" onSubmit={enviarMensagem}>
+        {/* Coluna da Direita: Formulário com cantos arredondados 3xl */}
+        <div className="bg-adv-branco p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+          <form ref={form} className="space-y-6" onSubmit={enviarMensagem}>
+            
             <div>
-              <label htmlFor="nome" className="block text-sm font-medium mb-2">Nome Completo</label>
+              <label htmlFor="nome" className="block text-sm font-bold text-adv-marinho mb-2">Nome Completo</label>
               <input 
                 type="text" 
                 id="nome" 
                 name="nome" 
-                required
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-adv-laranja transition-all"
-                placeholder="Seu nome"
+                required 
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all" 
               />
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="telefone" className="block text-sm font-medium mb-2">Telefone / WhatsApp</label>
-                <input 
-                  type="tel" 
-                  id="telefone" 
-                  name="telefone" 
-                  required
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-adv-laranja transition-all"
-                  placeholder="(00) 00000-0000"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">E-mail</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-adv-laranja transition-all"
-                  placeholder="seu@email.com"
-                />
-              </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-bold text-adv-marinho mb-2">E-mail</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all" 
+              />
             </div>
 
             <div>
-              <label htmlFor="mensagem" className="block text-sm font-medium mb-2">Como podemos ajudar?</label>
+              <label htmlFor="mensagem" className="block text-sm font-bold text-adv-marinho mb-2">Como podemos ajudar?</label>
               <textarea 
                 id="mensagem" 
                 name="mensagem" 
-                rows={4}
-                required
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-adv-laranja transition-all resize-none"
-                placeholder="Descreva brevemente o seu caso..."
+                rows={4} 
+                required 
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all resize-none"
               ></textarea>
+            </div>
+
+            {/* TRAVA DE SEGURANÇA LGPD */}
+            <div className="bg-adv-creme/50 p-4 rounded-xl border border-adv-marrom/20 text-xs text-adv-cinza">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  name="consentimento_lgpd"
+                  required 
+                  className="mt-1 w-4 h-4 text-adv-marrom bg-white border-gray-300 rounded focus:ring-adv-marrom focus:ring-offset-1 shrink-0" 
+                />
+                <span className="leading-relaxed">
+                  Li e estou ciente da Política de Privacidade. Os dados informados são utilizados exclusivamente para responder a este contato e avaliar a possibilidade de atendimento. <Link to="/politica-de-privacidade" className="font-bold underline hover:text-adv-marrom">Consulte a Política de Privacidade.</Link>
+                </span>
+              </label>
             </div>
 
             <button 
               type="submit" 
               disabled={enviando}
-              className="w-full bg-adv-laranja text-adv-branco font-bold uppercase tracking-wider py-4 rounded-lg hover:bg-orange-600 transition-colors mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-adv-marinho text-adv-branco font-bold uppercase tracking-wider py-4 rounded-xl hover:bg-adv-marrom transition-colors flex items-center justify-center gap-2 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {enviando ? 'Enviando...' : 'Enviar Mensagem'}
+              {enviando ? 'Enviando Mensagem...' : 'Enviar Mensagem'}
+              {!enviando && <Send size={18} />}
             </button>
 
-            {/* Mensagem de Sucesso ou Erro */}
+            {/* Mensagens de Feedback */}
             {status === 'sucesso' && (
-              <p className="text-green-600 font-medium text-center mt-4">Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+              <p className="text-green-700 font-medium text-center mt-4 bg-green-50 p-3 rounded-xl border border-green-200">
+                Mensagem enviada com sucesso! O escritório retornará em breve.
+              </p>
             )}
             {status === 'erro' && (
-              <p className="text-red-600 font-medium text-center mt-4">Ocorreu um erro ao enviar. Tente novamente mais tarde.</p>
+              <p className="text-red-700 font-medium text-center mt-4 bg-red-50 p-3 rounded-xl border border-red-200">
+                Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato pelo e-mail.
+              </p>
             )}
+            
           </form>
         </div>
 

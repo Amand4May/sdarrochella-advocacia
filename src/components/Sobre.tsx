@@ -1,43 +1,52 @@
 export function Sobre() {
   return (
-    <section id="sobre" className="bg-adv-creme py-20 px-6 md:px-12 lg:py-32 flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
-      
-      {/* Coluna da Esquerda: Imagem da Advogada/Escritório */}
-      <div className="md:w-1/2 flex justify-center w-full">
-        <div className="relative w-full max-w-md">
-          {/* Elementos decorativos com as cores da paleta */}
-          <div className="absolute -top-4 -left-4 w-24 h-24 bg-adv-laranja -z-10"></div>
-          <div className="absolute -bottom-4 -right-4 w-24 h-24 border-4 border-adv-azulClaro -z-10"></div>
+    <section id="sobre" className="py-24 px-6 md:px-12 bg-adv-branco">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        {/* Lado Esquerdo: O Escritório */}
+        <div className="lg:col-span-7 space-y-6 text-lg leading-relaxed text-adv-cinza text-justify">
+          <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest block">Institucional</span>
+          <h2 className="text-4xl lg:text-5xl font-serif text-adv-marinho text-left mb-6">O escritório</h2>
           
-          {/* Imagem temporária */}
-          <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
-            alt="Dra. Renata - SDA Advocacia" 
-            className="w-full h-auto object-cover shadow-2xl relative z-0"
-          />
-        </div>
-      </div>
-
-      {/* Coluna da Direita: Textos */}
-      <div className="md:w-1/2 space-y-6">
-        <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
-          Sobre o Escritório
-        </span>
-        
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-adv-marinho leading-tight">
-          Defendendo seus interesses com ética e transparência.
-        </h2>
-        
-        <div className="space-y-4 text-adv-cinza text-base md:text-lg">
           <p>
-            A <strong>SDA Advocacia</strong> nasceu do sonho de uma mulher determinada a transformar sua paixão pela justiça em uma carreira voltada a ajudar pessoas a superar problemas que parecem sem solução. Fundado por <strong>Dra. Renata L. Sequeira d’Arrochella</strong>, o escritório acumula mais de 9 anos de experiência nas áreas trabalhista e de defesa do consumidor, sempre guiado por um compromisso com o melhor atendimento e a busca das soluções mais eficazes para cada cliente.
-            </p>
-          <p>
-            Com uma equipe dedicada de assessores e colaboradores administrativos, garantimos que nossa fundadora e expert possa concentrar-se plenamente na resolução dos casos que chegam ao escritório, proporcionando tranquilidade e resultados eficientes aos nossos clientes. Sabemos o quanto um problema jurídico pode tirar o sono e o sossego, e por isso, trabalhamos com empatia e dedicação para devolver a paz que você merece.
+            A <span className="font-bold">SDA Advocacia</span> é um escritório dedicado às relações de trabalho, às relações de consumo e à proteção de dados pessoais, com atuação judicial, extrajudicial e consultiva.
           </p>
+          
+          <p>
+            Fundado pela <span className="font-bold">Dra. Renata Lima Sequeira d'Arrochella</span> em <span className="font-bold">2015</span>, o escritório reúne, em uma mesma estrutura, três frentes que costumam ser tratadas de forma isolada: a defesa de direitos individuais, a assessoria preventiva a empresas e a governança de dados pessoais. Essa combinação permite enxergar o mesmo fato sob perspectivas complementares, o que se traduz em análises mais completas e em decisões mais incorpadas.
+          </p>
+          
+          <div className="p-6 bg-adv-creme/60 border-l-4 border-adv-laranja rounded-r-2xl shadow-sm mt-8">
+            <p className="font-medium text-adv-marinho text-base md:text-lg">
+              O trabalho é organizado a partir de três premissas: fundamentação técnica documentada, comunicação clara sobre riscos e alternativas, e acompanhamento próximo de cada etapa do caso.
+            </p>
+          </div>
         </div>
-      </div>
 
+        {/* Lado Direito: Nossa Estrutura */}
+        <div className="lg:col-span-5 bg-adv-creme rounded-3xl border border-adv-marrom/10 shadow-xl overflow-hidden flex flex-col">
+          
+          <div className="w-full h-[450px] lg:h-[500px] relative overflow-hidden bg-adv-marrom/5">
+             <img 
+               src="/escritorio.jpg" 
+               alt="Interior do escritório SDA Advocacia" 
+               className="w-full h-full object-cover object-center"
+             />
+          </div>
+
+          <div className="p-8 md:p-10 pt-6 relative z-10">
+            <h3 className="text-2xl lg:text-3xl font-serif text-adv-marinho mb-1">
+              Nossa Estrutura e Acolhimento
+            </h3>
+            <p className="text-adv-marrom font-bold tracking-widest uppercase text-xs mb-8">MODERNIDADE E CONFORTO</p>
+
+            <p className="text-adv-cinza leading-relaxed pt-6 border-t border-adv-marrom/20 text-sm italic">
+              Nosso escritório foi concebido para ser um local de trabalho inspirador e um ponto de acolhimento para nossos clientes. Valorizamos o conforto e a privacidade, proporcionando um ambiente propício para a discussão de assuntos delicados.
+            </p>            
+          </div>
+        </div>
+
+      </div>
     </section>
   );
 }

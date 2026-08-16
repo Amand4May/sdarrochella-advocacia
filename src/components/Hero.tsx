@@ -1,31 +1,45 @@
+import { Link } from 'react-router-dom';
+
 export function Hero() {
   return (
     <section 
       id="home" 
-      // 👇 Aqui está a mágica: removemos o py-32 e adicionamos o min-h-[calc(...)]
-      className="relative text-adv-branco px-6 md:px-12 min-h-[calc(100vh-60px)] flex items-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20230714/pngtree-d-render-of-a-lawyer-s-office-with-a-judge-s-image_3888408.jpg')" }}
+      className="relative min-h-[calc(100vh-80px)] flex flex-col lg:flex-row"
     >
       
-      {/* 1. Película Escura (Overlay) usando o Azul Marinho da identidade visual */}
-      <div className="absolute inset-0 bg-adv-marinho/80"></div>
-
-      {/* 2. Conteúdo (Textos e Botão) */}
-      <div className="relative z-10 max-w-3xl space-y-6">
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif leading-tight">
-          Estratégias Jurídicas para transformar o seu problema em solução.
-        </h1>
-        <p className="text-adv-bege text-lg md:text-xl max-w-2xl">
-          Advocacia judicial e extrajudicial, para você e sua empresa, nas áreas trabalhista e consumerista.
-        </p>
-        <div className="pt-8">
-          <a 
-            href="#contato" 
-            className="inline-block bg-adv-laranja hover:bg-adv-marrom text-adv-branco px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors duration-300"
-          >
-            Agende uma Consulta
-          </a>
+      {/* 1. Lado Esquerdo: Textos com Fundo Azul Marinho */}
+      <div className="w-full lg:w-1/2 bg-adv-marinho text-adv-branco px-6 md:px-12 py-20 flex flex-col justify-center">
+        <div className="max-w-xl mx-auto lg:ml-auto lg:mr-12 space-y-6">
+          <span className="text-sm md:text-base font-bold text-adv-laranja uppercase tracking-widest block">
+            Renata Lima Sequeira d'Arrochella Advocacia (SDA Advocacia)
+          </span>
+          
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-serif leading-tight">
+            Advocacia técnica em relações de trabalho, consumo e proteção de dados
+          </h1>
+          
+          <p className="text-adv-bege text-lg md:text-xl leading-relaxed">
+            Atuação judicial, extrajudicial, de assessoria e consultiva para pessoas físicas e para empresas, com atuação em Niterói e no Rio de Janeiro - RJ.
+          </p>
+          
+          <div className="pt-6">
+            <Link 
+              to="/#contato" 
+              className="inline-block bg-adv-marrom hover:bg-adv-bege hover:text-adv-marinho text-adv-branco px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors duration-300 shadow-lg"
+            >
+              Agendar Atendimento
+            </Link>
+          </div>
         </div>
+      </div>
+
+      {/* 2. Lado Direito: A Foto Vertical Intacta */}
+      <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-full relative overflow-hidden bg-adv-creme">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/escritorio.jpg')" }}
+        ></div>
+        <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-adv-marinho to-transparent opacity-50 hidden lg:block"></div>
       </div>
 
     </section>
