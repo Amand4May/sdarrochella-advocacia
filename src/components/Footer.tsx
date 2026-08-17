@@ -80,7 +80,7 @@ export function Footer() {
 
       {/* Direitos Autorais e Crédito */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-adv-branco/50 flex flex-col md:flex-row justify-between items-center gap-4">
-        <span>&copy; {new Date().getFullYear()} S. Darrochella Advocacia. Todos os direitos reservados.</span>
+        <span>&copy; {new Date().getFullYear()} Sd'A Advocacia. Todos os direitos reservados.</span>
         <span>Desenvolvido por Amanda Mayumi</span>
       </div>
     </footer>

@@ -66,7 +66,7 @@ export function Contato() {
               </div>
               <div>
                 <h4 className="font-bold">Endereço (Sede)</h4>
-                <p className="text-adv-cinza">Estrada Francisco da Cruz Nunes, Piratininga, Niterói, RJ</p>
+                <p className="text-adv-cinza">Estrada Francisco da Cruz 5428 loja 123, Shopping Barravento, Piratininga, Niterói, RJ</p>
               </div>
             </div>
           </div>

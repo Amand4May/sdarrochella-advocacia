@@ -71,7 +71,7 @@ export function Header() {
           <Link to="/para-voce" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Para Você</Link>
           <Link to="/para-empresas" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Para Empresas</Link>
           <Link to="/atuacao-em-parceria" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Parcerias</Link>
-          <Link to="/contato" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2">Contato</Link>
+          <Link to="/#contato" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2">Contato</Link>
         </nav>
       )}
 

@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Sobre } from './components/Sobre';
 import { ComoAtuamos } from './components/ComoAtuamos';
-import { AreasAtuacao } from './components/AreasAtuacao';
 import { Equipe } from './components/Equipe';
 import { PortalCliente } from './components/PortalCliente';
 import { Contato } from './components/Contato';
@@ -40,7 +39,6 @@ function Home() {
       <Bifurcacao />
       <Sobre />
       <ComoAtuamos />
-      <AreasAtuacao />
       <Equipe />
       <PortalCliente />
       <Contato />
