@@ -16,6 +16,7 @@ import { PoliticaCookies } from './components/PoliticaCookies';
 import { AtuacaoEmParceria } from './components/AtuacaoEmParceria';
 import { Bifurcacao } from './components/Bifurcacao';
 
+
 function Home() {
   const location = useLocation();
 
