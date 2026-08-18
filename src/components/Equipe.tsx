@@ -1,26 +1,68 @@
 import { useState } from 'react';
 
 export function Equipe() {
-  const [certificadoAberto, setCertificadoAberto] = useState<{ titulo: string; src: string } | null>(null);
+  // Estado para controlar o certificado aberto e qual página está ativa
+  const [certificadoAberto, setCertificadoAberto] = useState<{ titulo: string; src: string | string[] } | null>(null);
+  const [paginaAtiva, setPaginaAtiva] = useState(0);
 
-  // Lista atualizada com os 10 certificados da imagem
   const certificados = [
-    { id: 1, titulo: 'Performan-C', tipo: 'Capacitação', src: '/certificados/certificado-performan-c.jpg' },
-    { id: 2, titulo: 'Expert em Execução', tipo: 'Prática Jurídica', src: '/certificados/certificado-expert-execucao.jpg' },
-    { id: 3, titulo: 'Gestão de Tempo e Produtividade', tipo: 'Desenvolvimento', src: '/certificados/certificado-gestao-tempo.png' },
-    { id: 4, titulo: 'Contestação e Reconvenção', tipo: 'Prática Jurídica', src: '/certificados/certificado-contestacao.jpg' },
-    { id: 5, titulo: 'Direito do Consumidor (Renato Porto)', tipo: 'Especialização', src: '/certificados/certificado-consumidor-porto.jpg' },
-    { id: 6, titulo: 'Custas e GRERJ ESAJ TJRJ', tipo: 'Prática Processual', src: '/certificados/certificado-custas.jpg' },
-    { id: 7, titulo: 'NR-1', tipo: 'Segurança e Trabalho', src: '/certificados/certificado-nr1.jpeg' },
-    { id: 8, titulo: 'Trabalho Plataformizado (TST)', tipo: 'Direito do Trabalho', src: '/certificados/certificado-tst-plataformas.jpg' },
+    { id: 1, titulo: 'Alta Performance Negocios', tipo: 'Capacitação', src: [
+        '/certificados/certificado-alta-perfomance-p1.png',
+        '/certificados/certificado-alta-perfomance-p2.png'
+      ]  },
+    { id: 2, titulo: 'Expert em Execução', tipo: 'Prática Jurídica', src: [
+        '/certificados/certificado-expert-execucao-p1.png',
+        '/certificados/certificado-expert-execucao-p2.png'
+    ] },
+    { 
+      id: 3, titulo: 'Gestão de Tempo e Produtividade', tipo: 'Desenvolvimento', src: '/certificados/certificado-gestao-tempo-p1.png' },
+    { id: 4, titulo: 'Contestação e Reconvenção', tipo: 'Prática Jurídica', src: '/certificados/certificado-contestacao.png' },
+    { id: 5, titulo: 'Direito do Consumidor', tipo: 'Especialização', src: '/certificados/certificado-consumidor.png' },
+    { id: 6, titulo: 'Custas e GRERJ ESAJ TJRJ', tipo: 'Prática Processual', src: [
+        '/certificados/certificado-custas-p1.png',
+        '/certificados/certificado-custas-p2.png'
+    ] },
+    { id: 7, titulo: 'NR-1', tipo: 'Segurança e Trabalho', src: '/certificados/certificado-nr1.png' },
+    { id: 8, titulo: 'Trabalho Plataformizado (TST)', tipo: 'Direito do Trabalho', src: [
+        '/certificados/certificado-tst-plataformas-p1.png',
+        '/certificados/certificado-tst-plataformas-p2.png'
+    ] },
     { id: 9, titulo: 'Dados e IA', tipo: 'Tecnologia e LGPD', src: '/certificados/certificado-dados-ia.png' },
-    { id: 10, titulo: 'Validação de Certificado - AVA', tipo: 'Educação', src: '/certificados/certificado-ava.jpg' }
   ];
+
+  // Funções auxiliares para navegação de páginas do certificado
+  const abrirCertificado = (cert: { titulo: string; src: string | string[] }) => {
+    setCertificadoAberto(cert);
+    setPaginaAtiva(0); // Sempre começa na primeira página
+  };
+
+  const proximaPagina = (e: React.MouseEvent, totalPaginas: number) => {
+    e.stopPropagation(); // Impede fechar o modal ao clicar na seta
+    if (paginaAtiva < totalPaginas - 1) setPaginaAtiva(paginaAtiva + 1);
+  };
+
+  const paginaAnterior = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (paginaAtiva > 0) setPaginaAtiva(paginaAtiva - 1);
+  };
+
+  // Determina qual imagem exibir no modal baseado no estado
+  const obterImagemAtual = () => {
+    if (!certificadoAberto) return '';
+    if (Array.isArray(certificadoAberto.src)) {
+      return certificadoAberto.src[paginaAtiva];
+    }
+    return certificadoAberto.src;
+  };
+
+  const isArraySrc = certificadoAberto && Array.isArray(certificadoAberto.src);
+  const totalPaginas = isArraySrc ? (certificadoAberto?.src as string[]).length : 1;
 
   return (
     <section id="equipe" className="py-24 px-6 md:px-12 bg-adv-creme/40">
       <div className="max-w-6xl mx-auto">
         
+        {/* Cabeçalho da Seção */}
         <div className="text-center mb-16">
           <span className="text-sm font-bold text-adv-laranja uppercase tracking-widest">
             Quem Somos
@@ -33,6 +75,7 @@ export function Equipe() {
           </p>
         </div>
 
+        {/* Card Principal da Dra. Renata */}
         <div className="bg-adv-branco rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row items-stretch border border-adv-marrom/10">
           
           <div className="md:w-2/5 w-full h-96 md:h-auto relative bg-white">
@@ -77,12 +120,11 @@ export function Equipe() {
                 Certificações e Autoridade
               </h4>
               
-              {/* O segredo está aqui: max-h-[220px] e overflow-y-auto */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[220px] overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-adv-creme [&::-webkit-scrollbar-thumb]:bg-adv-marrom/30 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {certificados.map((cert) => (
                   <button 
                     key={cert.id}
-                    onClick={() => setCertificadoAberto({ titulo: cert.titulo, src: cert.src })}
+                    onClick={() => abrirCertificado({ titulo: cert.titulo, src: cert.src })}
                     className="group text-left flex items-center gap-2 p-2 rounded-lg border border-adv-marrom/10 bg-adv-branco hover:border-adv-laranja/50 hover:bg-adv-creme transition-all duration-300 w-full"
                     title="Visualizar documento"
                   >
@@ -134,19 +176,20 @@ export function Equipe() {
         </div>
       </div>
 
-      {/* --- POP-UP / MODAL DO CERTIFICADO --- */}
+      {/* --- POP-UP / MODAL DO CERTIFICADO COM NAVEGAÇÃO DE PÁGINAS --- */}
       {certificadoAberto && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
           onClick={() => setCertificadoAberto(null)}
         >
           <div 
             className="relative bg-white p-3 rounded-2xl max-w-4xl w-full shadow-2xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Botão de Fechar X */}
             <button 
               onClick={() => setCertificadoAberto(null)}
-              className="absolute -top-12 right-0 bg-adv-laranja hover:bg-adv-laranja/80 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all"
+              className="absolute -top-12 right-0 bg-adv-laranja hover:bg-adv-laranja/80 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all z-10"
               title="Fechar"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -155,15 +198,55 @@ export function Equipe() {
               </svg>
             </button>
 
-            <img 
-              src={certificadoAberto.src} 
-              alt={certificadoAberto.titulo} 
-              className="w-full h-auto max-h-[80vh] object-contain rounded-lg bg-gray-100"
-            />
+            {/* Container da Imagem com as Setas Relativas */}
+            <div className="relative w-full flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden group">
+              
+              {/* Seta Esquerda (Anterior) - Só aparece se houver páginas anteriores */}
+              {isArraySrc && paginaAtiva > 0 && (
+                <button 
+                  onClick={paginaAnterior}
+                  className="absolute left-4 bg-black/50 hover:bg-adv-laranja text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all z-10"
+                  title="Página Anterior"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+              )}
+
+              {/* Imagem Exibida */}
+              <img 
+                src={obterImagemAtual()} 
+                alt={certificadoAberto.titulo} 
+                className="w-full h-auto max-h-[75vh] object-contain rounded-lg"
+              />
+
+              {/* Seta Direita (Próximo) - Só aparece se houver mais páginas à frente */}
+              {isArraySrc && paginaAtiva < totalPaginas - 1 && (
+                <button 
+                  onClick={(e) => proximaPagina(e, totalPaginas)}
+                  className="absolute right-4 bg-black/50 hover:bg-adv-laranja text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all z-10"
+                  title="Próxima Página"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              )}
+            </div>
             
-            <p className="text-adv-marinho font-serif font-medium text-sm md:text-base mt-3 text-center px-4">
-              {certificadoAberto.titulo}
-            </p>
+            {/* Título e Indicador de Páginas */}
+            <div className="w-full flex flex-col sm:flex-row justify-between items-center mt-3 px-4 gap-1">
+              <p className="text-adv-marinho font-serif font-medium text-sm md:text-base text-center sm:text-left">
+                {certificadoAberto.titulo}
+              </p>
+              {totalPaginas > 1 && (
+                <span className="text-xs font-mono font-bold bg-adv-marinho/10 text-adv-marinho px-2.5 py-1 rounded-full shrink-0">
+                  Pág. {paginaAtiva + 1} de {totalPaginas}
+                </span>
+              )}
+            </div>
+
           </div>
         </div>
       )}
