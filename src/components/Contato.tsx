@@ -18,10 +18,10 @@ export function Contato() {
     setStatus('idle');
 
     emailjs.sendForm(
-      'SEU_SERVICE_ID', // Substituir depois
-      'SEU_TEMPLATE_ID', // Substituir depois
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       form.current,
-      'SUA_PUBLIC_KEY' // Substituir depois
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
       setStatus('sucesso');
@@ -87,15 +87,29 @@ export function Contato() {
               />
             </div>
             
-            <div>
-              <label htmlFor="email" className="block text-sm font-bold text-adv-marinho mb-2">E-mail</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all" 
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-bold text-adv-marinho mb-2">E-mail</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all" 
+                />
+              </div>
+
+              {/* 👉 NOVO: Campo de Telefone Adicionado 👈 */}
+              <div>
+                <label htmlFor="telefone" className="block text-sm font-bold text-adv-marinho mb-2">Telefone</label>
+                <input 
+                  type="tel" 
+                  id="telefone" 
+                  name="telefone" 
+                  required 
+                  className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-adv-marrom focus:border-transparent transition-all" 
+                />
+              </div>
             </div>
 
             <div>
