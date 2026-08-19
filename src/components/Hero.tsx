@@ -37,7 +37,7 @@ export function Hero() {
       <div className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-full relative overflow-hidden bg-adv-creme">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/escritorio.jpg')" }}
+          style={{ backgroundImage: "url('/escritorio-fachada.jpg')" }}
         ></div>
         <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-adv-marinho to-transparent opacity-50 hidden lg:block"></div>
       </div>
