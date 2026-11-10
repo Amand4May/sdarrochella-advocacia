@@ -23,7 +23,7 @@ export function Header() {
           <Link to="/">
             <img 
               src="/advocaciapreto.svg" 
-              alt="Logo S. Darrochella Advocacia" 
+              alt="Logo Lima d'Arrochella Advocacia" 
               className="h-12 md:h-20 w-auto object-contain" 
             />
           </Link>

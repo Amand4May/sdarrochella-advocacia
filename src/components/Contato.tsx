@@ -56,7 +56,7 @@ export function Contato() {
               </div>
               <div>
                 <h4 className="font-bold">E-mail Corporativo</h4>
-                <p className="text-adv-cinza">contato@sdarrochella.com.br</p>
+                <p className="text-adv-cinza">contato@limadarrochella.com.br</p>
               </div>
             </div>
             
@@ -66,7 +66,17 @@ export function Contato() {
               </div>
               <div>
                 <h4 className="font-bold">Endereço (Sede)</h4>
-                <p className="text-adv-cinza">Estrada Francisco da Cruz 5428 loja 123, Shopping Barravento, Piratininga, Niterói, RJ</p>
+                <p className="text-adv-cinza">Estrada Francisco da Cruz Nunes, 5428, Loja 123, Shopping Barravento, Piratininga, Niterói/RJ, CEP 24.350-310</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-adv-branco rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-gray-100">
+                <MapPin className="text-adv-marrom" size={24} />
+              </div>
+              <div>
+                <h4 className="font-bold">Endereço (Icaraí)</h4>
+                <p className="text-adv-cinza">Rua Ator Paulo Gustavo, 251, sala 301, Icaraí, Niterói/RJ, CEP 24230-052</p>
               </div>
             </div>
           </div>

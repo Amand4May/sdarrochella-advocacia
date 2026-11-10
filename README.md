@@ -1,6 +1,6 @@
-# S. Darrochella Advocacia - Landing Page
+# Lima d'Arrochella Advocacia - Landing Page
 
-Landing page profissional desenvolvida sob medida para o escritório S. Darrochella Advocacia. O projeto foi projetado com foco em conversão, usabilidade e design responsivo, oferecendo uma experiência moderna e confiável para os clientes do escritório.
+Landing page profissional desenvolvida sob medida para o escritório Lima d'Arrochella Advocacia. O projeto foi projetado com foco em conversão, usabilidade e design responsivo, oferecendo uma experiência moderna e confiável para os clientes do escritório.
 
 ## 🚀 Tecnologias Utilizadas
 

@@ -20,7 +20,7 @@ export function Footer() {
         <div className="md:col-span-4 space-y-6">
           <img 
             src="/advocaciapreto.svg" 
-            alt="S. Darrochella Advocacia Logo" 
+            alt="Logo Lima d'Arrochella Advocacia" 
             className="h-14 w-auto brightness-0 invert" 
           />
           <p className="text-adv-branco/70 leading-relaxed">
@@ -29,11 +29,15 @@ export function Footer() {
           <div className="space-y-4 pt-2">
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-adv-marrom shrink-0 mt-0.5" />
-              <span>Estrada Francisco da Cruz 5428 loja 123, Shopping Barravento, Piratininga, Niterói, RJ</span>
+              <span>Estrada Francisco da Cruz Nunes, 5428, Loja 123, Shopping Barravento, Piratininga, Niterói/RJ, CEP 24.350-310</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin size={18} className="text-adv-marrom shrink-0 mt-0.5" />
+              <span>Rua Ator Paulo Gustavo, 251, sala 301, Icaraí, Niterói/RJ, CEP 24230-052</span>
             </div>
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-adv-marrom shrink-0" />
-              <span>contato@sdarrochella.com.br</span>
+              <span>contato@limadarrochella.com.br</span>
             </div>
           </div>
         </div>
@@ -66,13 +70,13 @@ export function Footer() {
             <span className="font-bold uppercase tracking-wider text-xs">Conformidade LGPD</span>
           </div>
           <p className="leading-relaxed">
-            O tratamento de dados pessoais realizado neste site é efetuado por Renata Lima Sequeira D’Arrochella, advogada inscrita na OAB/RJ sob o nº 201.951, com escritório profissional em Estrada Francisco da Cruz 5428 loja 123, Shopping Barravento, Piratininga, Niterói, Rio de Janeiro, na qualidade de controladora, nos termos do art. 5º, VI, da Lei nº 13.709/2018 (LGPD).
+            O tratamento de dados pessoais realizado neste site é efetuado por Lima d'Arrochella Sociedade Individual de Advocacia, inscrita no CNPJ sob o nº 69.841.543/0001-38 e registrada na OAB/RJ sob o nº [REGISTRO OAB SOCIEDADE], com sede na Estrada Francisco da Cruz Nunes, 5428, Loja 123, Piratininga, Niterói/RJ, na qualidade de controladora, nos termos do art. 5º, VI, da Lei nº 13.709/2018 (LGPD).
           </p>
           <p className="leading-relaxed">
-            A controladora atua como profissional liberal, sem constituição de sociedade de advogados. As atribuições de encarregada são exercidas pela própria controladora.
+            As atribuições de encarregada pelo tratamento de dados pessoais são exercidas pela titular da sociedade, Dra. Renata Lima Sequeira d'Arrochella (OAB/RJ 201.951).
           </p>
           <p className="leading-relaxed">
-            Canal de comunicação para exercício de direitos e esclarecimentos sobre proteção de dados: <a href="mailto:contato@sdarrochella.com.br" className="text-adv-marrom hover:underline font-medium">contato@sdarrochella.com.br</a>.
+            Canal de comunicação para exercício de direitos e esclarecimentos sobre proteção de dados: <a href="mailto:contato@limadarrochella.com.br" className="text-adv-marrom hover:underline font-medium">contato@limadarrochella.com.br</a>.
           </p>
         </div>
 
@@ -80,7 +84,7 @@ export function Footer() {
 
       {/* Direitos Autorais e Crédito */}
       <div className="relative z-10 max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-adv-branco/50 flex flex-col md:flex-row justify-between items-center gap-4">
-        <span>&copy; {new Date().getFullYear()} Sd'A Advocacia. Todos os direitos reservados.</span>
+        <span>&copy; {new Date().getFullYear()} Ld'A Advocacia. Todos os direitos reservados.</span>
         
         <span className="flex items-center gap-1">
           Desenvolvido por{' '}

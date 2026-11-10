@@ -6,7 +6,7 @@ export function ParaEmpresas() {
   return (
     <main className="pb-24 bg-adv-branco text-adv-cinza">
       <Helmet>
-        <title>Para Empresas | S. Darrochella Advocacia</title>
+        <title>Para Empresas | Lima d'Arrochella Advocacia</title>
         <meta name="description" content="Assessoria jurídica para empresas: Compliance, LGPD, DPO e Relações de Consumo." />
       </Helmet>
 

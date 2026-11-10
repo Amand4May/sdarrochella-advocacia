@@ -6,7 +6,7 @@ export function AtuacaoEmParceria() {
   return (
     <main className="bg-adv-branco text-adv-cinza min-h-screen">
       <Helmet>
-        <title>Atuação em Parceria | SDA Advocacia</title>
+        <title>Atuação em Parceria | Lima d'Arrochella Advocacia</title>
         <meta name="description" content="Conheça nossos escritórios parceiros nas áreas de Direito Previdenciário, Bancário, Imobiliário e Famílias." />
       </Helmet>
 

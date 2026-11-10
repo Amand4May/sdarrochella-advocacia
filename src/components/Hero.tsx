@@ -11,7 +11,7 @@ export function Hero() {
       <div className="w-full lg:w-1/2 bg-adv-marinho text-adv-branco px-6 md:px-12 py-20 flex flex-col justify-center">
         <div className="max-w-xl mx-auto lg:ml-auto lg:mr-12 space-y-6">
           <span className="text-sm md:text-base font-bold text-adv-laranja uppercase tracking-widest block">
-            Renata Lima Sequeira d'Arrochella Advocacia (SDA Advocacia)
+            Lima d'Arrochella Sociedade Individual de Advocacia
           </span>
           
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-serif leading-tight">

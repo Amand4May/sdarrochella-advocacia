@@ -6,7 +6,7 @@ export function PoliticaPrivacidade() {
   return (
     <main className="pt-32 pb-24 px-6 md:px-12 bg-adv-branco text-adv-cinza min-h-screen">
       <Helmet>
-        <title>Política de Privacidade | SDA Advocacia</title>
+        <title>Política de Privacidade | Lima d'Arrochella Advocacia</title>
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

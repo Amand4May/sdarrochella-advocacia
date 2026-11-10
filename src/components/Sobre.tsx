@@ -9,7 +9,7 @@ export function Sobre() {
           <h2 className="text-4xl lg:text-5xl font-serif text-adv-marinho text-left mb-6">O escritório</h2>
           
           <p>
-            A <span className="font-bold">SDA Advocacia</span> é um escritório dedicado às relações de trabalho, às relações de consumo e à proteção de dados pessoais, com atuação judicial, extrajudicial e consultiva.
+            A <span className="font-bold">Lima d'Arrochella Advocacia</span> é um escritório dedicado às relações de trabalho, às relações de consumo e à proteção de dados pessoais, com atuação judicial, extrajudicial e consultiva.
           </p>
           
           <p>
@@ -29,7 +29,7 @@ export function Sobre() {
           <div className="w-full h-[450px] lg:h-[500px] relative overflow-hidden bg-adv-marrom/5">
              <img 
                src="/escritorio.jpg" 
-               alt="Interior do escritório SDA Advocacia" 
+               alt="Interior do escritório Lima d'Arrochella Advocacia" 
                className="w-full h-full object-cover object-center"
              />
           </div>

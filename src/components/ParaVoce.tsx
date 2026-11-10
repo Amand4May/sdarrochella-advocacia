@@ -6,7 +6,7 @@ export function ParaVoce() {
   return (
     <main className="pb-24 bg-adv-branco text-adv-cinza">
       <Helmet>
-        <title>Para Você | S. Darrochella Advocacia</title>
+        <title>Para Você | Lima d'Arrochella Advocacia</title>
         <meta name="description" content="Atendimento pessoa física: Direito do Trabalho, Consumidor e Proteção de Dados." />
       </Helmet>
 
