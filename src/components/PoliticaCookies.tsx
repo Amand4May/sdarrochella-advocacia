@@ -39,8 +39,12 @@ export function PoliticaCookies() {
             Esta política pode ser alterada a qualquer tempo, com indicação da data da última atualização. Alterações substanciais são informadas no próprio site.
           </p>
 
+          <p>
+            Dúvidas sobre esta política: Lima d'Arrochella Sociedade Individual de Advocacia, <a href="mailto:contato@limadarrochella.com.br" className="text-adv-marrom hover:underline font-medium">contato@limadarrochella.com.br</a>.
+          </p>
+
           <div className="mt-12 pt-8 border-t border-gray-200 text-sm text-adv-cinza/70">
-            <p>Última atualização: {new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })}.</p>
+            <p>Última atualização: 13 de novembro de 2026.</p>
           </div>
         </div>
       </div>

@@ -23,6 +23,7 @@ export function PoliticaPrivacidade() {
         <h1 className="text-3xl md:text-4xl font-serif text-adv-marinho mb-8">Política de Privacidade</h1>
         
         <div className="space-y-6 text-base leading-relaxed text-adv-cinza/90 text-justify">
+          <h3 className="text-xl font-bold text-adv-marinho">Controladora e encarregada</h3>
           <p>
             O tratamento de dados pessoais realizado neste site é efetuado por Lima d'Arrochella Sociedade Individual de Advocacia, inscrita no CNPJ sob o nº 69.841.543/0001-38 e registrada na OAB/RJ sob o nº 229322026, com sede na Estrada Francisco da Cruz Nunes, 5428, Loja 123, Piratininga, Niterói/RJ, na qualidade de controladora, nos termos do art. 5º, VI, da Lei nº 13.709/2018 (LGPD).
           </p>
