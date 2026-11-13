@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -57,6 +57,16 @@ export function Contato() {
               <div>
                 <h4 className="font-bold">E-mail Corporativo</h4>
                 <p className="text-adv-cinza">contato@limadarrochella.com.br</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 bg-adv-branco rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-gray-100">
+                <Phone className="text-adv-marrom" size={24} />
+              </div>
+              <div>
+                <h4 className="font-bold">Telefone</h4>
+                <p className="text-adv-cinza"><a href="tel:+5521997050299" className="hover:text-adv-marrom transition-colors">(21) 99705-0299</a></p>
               </div>
             </div>
             

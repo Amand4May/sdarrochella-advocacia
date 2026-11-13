@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Shield } from 'lucide-react';
+import { MapPin, Mail, Phone, Shield } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -7,10 +7,10 @@ export function Footer() {
       
       {/* --- INÍCIO DA MARCA D'ÁGUA --- */}
       <img 
-        src="/Logo_Bege_Compacta.svg" 
+        src="/icone-ld-a.svg" 
         alt="" 
         aria-hidden="true"
-        className="absolute bottom-10 right-155 w-[450px] opacity-3 pointer-events-none select-none z-0"
+        className="absolute bottom-10 right-155 w-[450px] opacity-3 brightness-0 invert pointer-events-none select-none z-0"
       />
       {/* --- FIM DA MARCA D'ÁGUA --- */}
 
@@ -41,6 +41,10 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-adv-marrom shrink-0" />
               <span>contato@limadarrochella.com.br</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Phone size={18} className="text-adv-marrom shrink-0" />
+              <a href="tel:+5521997050299" className="hover:text-adv-marrom transition-colors">(21) 99705-0299</a>
             </div>
           </div>
         </div>
