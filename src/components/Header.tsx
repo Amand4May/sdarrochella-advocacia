@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export function Header() {
-  const [menuAberto, setMenuAberto] = useState(false);
   const location = useLocation();
+  // Guarda em qual navegacao o menu foi aberto: ao trocar de tela a chave muda
+  // e o menu mobile fecha sozinho, sem precisar de setState dentro de um effect.
+  const [menuAbertoEm, setMenuAbertoEm] = useState<string | null>(null);
+  const menuAberto = menuAbertoEm === location.key;
 
-  // funcao garante que o menu mobile feche sozinho e a pagina 
-  // role de volta para o topo toda vez que o usuario trocar de tela.
+  // A pagina rola de volta para o topo toda vez que o usuario trocar de tela.
   useEffect(() => {
-    setMenuAberto(false);
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -49,7 +50,7 @@ export function Header() {
           {/* Ícone de Menu Hambúrguer para Mobile */}
           <button 
             className="lg:hidden text-adv-marinho hover:text-adv-marrom p-2"
-            onClick={() => setMenuAberto(!menuAberto)}
+            onClick={() => setMenuAbertoEm(menuAberto ? null : location.key)}
           >
             {menuAberto ? (
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -12,20 +12,16 @@ const injectTrackingScripts = () => {
 };
 
 export function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(false);
+  // Se o usuário ainda não escolheu nada, mostra o banner (e nenhum script roda).
+  // Lido uma única vez na montagem, direto no estado inicial.
+  const [isVisible, setIsVisible] = useState(() => !localStorage.getItem('lgpd-consent-mode'));
 
   useEffect(() => {
-    // Verifica a preferência exata do usuário salva no navegador
-    const consentMode = localStorage.getItem('lgpd-consent-mode');
-    
-    if (!consentMode) {
-      // Se não escolheu nada ainda, mostra o banner (e nenhum script roda)
-      setIsVisible(true);
-    } else if (consentMode === 'all') {
-      // Se o usuário já aceitou tudo em uma visita anterior, injeta os scripts no load
+    // Se o usuário já aceitou tudo em uma visita anterior, injeta os scripts no load.
+    // Se for 'essential', o banner não aparece e o código de tracking também não roda.
+    if (localStorage.getItem('lgpd-consent-mode') === 'all') {
       injectTrackingScripts();
     }
-    // Se for 'essential', o banner não aparece e o código de tracking também não roda.
   }, []);
 
   const handleAcceptAll = () => {
