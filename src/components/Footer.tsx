@@ -19,9 +19,9 @@ export function Footer() {
         {/* Coluna 1: Marca e Endereço */}
         <div className="md:col-span-4 space-y-6">
           <img 
-            src="/Logo_Bege_Compacta.svg" 
+            src="/Logo_Bege_Sem_Fundo_Completa.svg" 
             alt="Logo Lima d'Arrochella Advocacia" 
-            className="h-12 w-auto" 
+            className="h-24 w-auto max-w-full" 
           />
           <p className="text-adv-branco/70 leading-relaxed">
             Advocacia técnica em relações de trabalho, consumo e proteção de dados.
