@@ -26,6 +26,9 @@ export function Footer() {
           <p className="text-adv-branco/70 leading-relaxed">
             Advocacia técnica em relações de trabalho, consumo e proteção de dados.
           </p>
+          <p className="text-adv-branco/70 text-sm leading-relaxed">
+            Lima d'Arrochella Sociedade Individual de Advocacia · CNPJ 69.841.543/0001-38 · OAB/RJ nº 229322026
+          </p>
           <div className="space-y-4 pt-2">
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-adv-marrom shrink-0 mt-0.5" />
@@ -70,7 +73,7 @@ export function Footer() {
             <span className="font-bold uppercase tracking-wider text-xs">Conformidade LGPD</span>
           </div>
           <p className="leading-relaxed">
-            O tratamento de dados pessoais realizado neste site é efetuado por Lima d'Arrochella Sociedade Individual de Advocacia, inscrita no CNPJ sob o nº 69.841.543/0001-38 e registrada na OAB/RJ sob o nº [REGISTRO OAB SOCIEDADE], com sede na Estrada Francisco da Cruz Nunes, 5428, Loja 123, Piratininga, Niterói/RJ, na qualidade de controladora, nos termos do art. 5º, VI, da Lei nº 13.709/2018 (LGPD).
+            O tratamento de dados pessoais realizado neste site é efetuado por Lima d'Arrochella Sociedade Individual de Advocacia, inscrita no CNPJ sob o nº 69.841.543/0001-38 e registrada na OAB/RJ sob o nº 229322026, com sede na Estrada Francisco da Cruz Nunes, 5428, Loja 123, Piratininga, Niterói/RJ, na qualidade de controladora, nos termos do art. 5º, VI, da Lei nº 13.709/2018 (LGPD).
           </p>
           <p className="leading-relaxed">
             As atribuições de encarregada pelo tratamento de dados pessoais são exercidas pela titular da sociedade, Dra. Renata Lima Sequeira d'Arrochella (OAB/RJ 201.951).
