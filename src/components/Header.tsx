@@ -16,21 +16,21 @@ export function Header() {
     <header className="bg-adv-branco shadow-sm sticky top-0 z-50">
       
       {/* Barra Principal */}
-      <div className="py-3 px-6 md:px-14 flex justify-between items-center">
+      <div className="py-3 px-6 md:px-14 flex justify-between items-center lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
         
         {/* 1. Logo do Escritório */}
         <div className="cursor-pointer flex items-center">
           <Link to="/">
             <img 
-              src="/Logo_Marrom_Compacta.svg" 
+              src="/Logo_Marrom_Sem_Fundo_Completa.svg" 
               alt="Logo Lima d'Arrochella Advocacia" 
-              className="h-10 md:h-14 w-auto object-contain" 
+              className="h-11 md:h-14 lg:h-11 xl:h-14 2xl:h-16 w-auto object-contain" 
             />
           </Link>
         </div>
 
         {/* 2. Menu de Navegação (Escondido no mobile, visível no desktop) */}
-        <nav className="hidden md:flex gap-8 text-xs font-bold text-adv-cinza uppercase tracking-widest items-center">
+        <nav className="hidden lg:flex gap-4 xl:gap-8 text-xs font-bold text-adv-cinza uppercase tracking-widest items-center">
           <Link to="/" className="hover:text-adv-marrom transition-colors duration-300">Início</Link>
           <Link to="/para-voce" className="hover:text-adv-marrom transition-colors duration-300">Para Você</Link>
           <Link to="/para-empresas" className="hover:text-adv-marrom transition-colors duration-300">Para Empresas</Link>
@@ -38,17 +38,17 @@ export function Header() {
         </nav>
 
         {/* 3. Botão Fale Conosco & Menu Mobile */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 lg:justify-self-end">
           <Link 
             to="/#contato"  
-            className="hidden md:inline-block bg-adv-marinho text-adv-branco px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-adv-cinza transition-colors duration-300"
+            className="hidden lg:inline-block bg-adv-marinho text-adv-branco px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-adv-cinza transition-colors duration-300"
           >
             Fale Conosco
           </Link>
 
           {/* Ícone de Menu Hambúrguer para Mobile */}
           <button 
-            className="md:hidden text-adv-marinho hover:text-adv-marrom p-2"
+            className="lg:hidden text-adv-marinho hover:text-adv-marrom p-2"
             onClick={() => setMenuAberto(!menuAberto)}
           >
             {menuAberto ? (
@@ -66,7 +66,7 @@ export function Header() {
 
       {/* 4. Menu Mobile Dropdown */}
       {menuAberto && (
-        <nav className="md:hidden bg-adv-branco border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-xl">
+        <nav className="lg:hidden bg-adv-branco border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-xl">
           <Link to="/" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Início</Link>
           <Link to="/para-voce" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Para Você</Link>
           <Link to="/para-empresas" className="text-sm font-bold text-adv-cinza uppercase tracking-widest hover:text-adv-marrom py-2 border-b border-gray-50">Para Empresas</Link>

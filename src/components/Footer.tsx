@@ -87,7 +87,7 @@ export function Footer() {
 
       {/* Direitos Autorais e Crédito */}
       <div className="relative z-10 max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-xs text-adv-branco/50 flex flex-col md:flex-row justify-between items-center gap-4">
-        <span>&copy; {new Date().getFullYear()} Ld'A Advocacia. Todos os direitos reservados.</span>
+        <span>&copy; {new Date().getFullYear()} Lima d'Arrochella Sociedade Individual de Advocacia. Todos os direitos reservados.</span>
         
         <span className="flex items-center gap-1">
           Desenvolvido por{' '}
