@@ -16,15 +16,15 @@ export function Header() {
     <header className="bg-adv-branco shadow-sm sticky top-0 z-50">
       
       {/* Barra Principal */}
-      <div className="py-1 px-6 md:px-14 flex justify-between items-center">
+      <div className="py-3 px-6 md:px-14 flex justify-between items-center">
         
         {/* 1. Logo do Escritório */}
         <div className="cursor-pointer flex items-center">
           <Link to="/">
             <img 
-              src="/advocaciapreto.svg" 
+              src="/Logo_Marrom_Compacta.svg" 
               alt="Logo Lima d'Arrochella Advocacia" 
-              className="h-12 md:h-20 w-auto object-contain" 
+              className="h-10 md:h-14 w-auto object-contain" 
             />
           </Link>
         </div>

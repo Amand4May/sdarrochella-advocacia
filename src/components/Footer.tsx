@@ -7,10 +7,10 @@ export function Footer() {
       
       {/* --- INÍCIO DA MARCA D'ÁGUA --- */}
       <img 
-        src="/advocaciapreto.svg" 
+        src="/Logo_Bege_Compacta.svg" 
         alt="" 
         aria-hidden="true"
-        className="absolute bottom-10 right-155 w-[450px] opacity-3 brightness-0 invert pointer-events-none select-none z-0"
+        className="absolute bottom-10 right-155 w-[450px] opacity-3 pointer-events-none select-none z-0"
       />
       {/* --- FIM DA MARCA D'ÁGUA --- */}
 
@@ -19,9 +19,9 @@ export function Footer() {
         {/* Coluna 1: Marca e Endereço */}
         <div className="md:col-span-4 space-y-6">
           <img 
-            src="/advocaciapreto.svg" 
+            src="/Logo_Bege_Compacta.svg" 
             alt="Logo Lima d'Arrochella Advocacia" 
-            className="h-14 w-auto brightness-0 invert" 
+            className="h-12 w-auto" 
           />
           <p className="text-adv-branco/70 leading-relaxed">
             Advocacia técnica em relações de trabalho, consumo e proteção de dados.
